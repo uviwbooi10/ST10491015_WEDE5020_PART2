@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Ou, de Marni</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Fallback so first tab is visible without JS */
+    .tabpanes section { display: none; }
+    .tabpanes section.active { display: block; }
+    .tabs .tab.active { font-weight: bold; border-bottom: 2px solid #000; }
+  </style>
+</head>
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div>Clean • Hypoallergenic • Vegan • Cruelty-free</div>
+      <div class="small">Cape Town • Johannesburg • Durban</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container" style="display:flex; align-items:center; gap:1rem; padding:.75rem 0;">
+      <a class="logo" href="index.html">
+        <img src="assests/logo.svg.png" alt="Ou, de Marni logo" />
+        <span>OU, DE MARNI</span>
+      </a>
+      <nav class="menu">
+        <a href="shop.html">Shop</a>
+        <a href="discover.html">Discover</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="help.html">Help</a>
+      </nav>
+      <div class="actions">
+        <a class="icon-btn" href="account.html" aria-label="Account">👤 Account</a>
+        <a class="icon-btn" href="account.html#wishlist" aria-label="Wishlist">♡ Wishlist</a>
+        <a class="icon-btn" href="account.html#cart" aria-label="Cart">🛒 Cart <span class="badge cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container section">
+    <h1>About Us</h1>
+
+    <div class="tabs">
+      <button class="tab active" data-target="brand">Brand Story & Vision</button>
+      <button class="tab" data-target="founder">Founder’s Story</button>
+      <button class="tab" data-target="promise">Clean Beauty Promise</button>
+      <button class="tab" data-target="press">Press / Media</button>
+    </div>
+
+    <div class="tabpanes">
+      <!-- Default visible -->
+      <section id="brand" class="active">
+        <h2>Born in Cape Town (2017)</h2>
+        <p>Ou, de Marni began with a single belief: fragrance should smell good, feel good, and be made better. We set out to create scents that are not only beautiful, but also clean, hypoallergenic, and safe for everyone.</p>
+      </section>
+
+      <section id="founder">
+        <h2>Ye Marni</h2>
+        <p>A lifelong love of scent and design inspired our founder to create modern, skin-safe perfumes for everyone. What started as a passion project quickly became a movement redefining clean luxury fragrance.</p>
+      </section>
+
+      <section id="promise">
+        <h2>Our Clean Standard</h2>
+        <ul>
+          <li>Hypoallergenic, vegan, and cruelty-free</li>
+          <li>Ingredient transparency at every step</li>
+          <li>Dermatologically tested formulas</li>
+          <li>Inspired by Cape Town’s natural beauty</li>
+        </ul>
+      </section>
+
+      <section id="press">
+        <h2>Press / Media</h2>
+        <p>Ou, de Marni has been featured in beauty and lifestyle media for setting a new standard in clean perfumery.</p>
+        <p>For media inquiries: <a href="mailto:press@oudemarni.com">press@oudemarni.com</a></p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid" style="grid-template-columns:2fr 1fr 1fr 1fr; gap:2rem;">
+      <div>
+        <h3>Ou, de Marni</h3>
+        <p class="small">Set a new standard for clean, sophisticated fragrance inspired by Cape Town weather.</p>
+        <p class="small">© <span id="year"></span> Ou, de Marni. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html#all">All Fragrances</a></li>
+          <li><a href="shop.html#bestsellers">Bestsellers</a></li>
+          <li><a href="shop.html#new">New Arrivals</a></li>
+          <li><a href="shop.html#gift">Gift Sets & Miniatures</a></li>
+          <li><a href="discover.html#scent-club">Scent Club (Subscribe)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="discover.html#quiz">Scent Finder Quiz</a></li>
+          <li><a href="discover.html#ingredients">Ingredients & Transparency</a></li>
+          <li><a href="discover.html#sustainability">Sustainability Journey</a></li>
+          <li><a href="discover.html#blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="help.html#faqs">FAQs</a></li>
+          <li><a href="help.html#shipping">Shipping & Returns</a></li>
+          <li><a href="help.html#contact">Contact Us</a></li>
+          <li><a href="help.html#track">Track Order</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
+

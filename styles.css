@@ -1,0 +1,390 @@
+/* =====================================
+   Ou, de Marni — Full Stylesheet
+   Part 2: Designing the Visuals
+   ===================================== */
+
+/* -------- 1. Reset & Base -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fff;
+}
+
+/* -------- 2. Color Variables -------- */
+:root {
+  --primary: #caa84f;       /* gold tone */
+  --dark: #111;
+  --light: #f8f8f8;
+  --grey: #555;
+  --radius: 12px;
+}
+
+/* -------- 3. General Layout -------- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+p, li {
+  margin-bottom: 1rem;
+  color: var(--grey);
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+/* -------- 4. Topbar -------- */
+.topbar {
+  background: hsl(0, 1%, 14%);
+  color: var(--light);
+  text-align: center;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+
+}
+
+.topbar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.topbar div:first-child {
+  font-weight: 700;
+  color: #000;
+  border: 2px solid #000;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  background: #fdfdfd;
+}
+
+.topbar .small {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+/* -------- 5. Header / Navigation -------- */
+.header {
+  background: var(--dark);
+  color: #fff;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.header .logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: var(--primary);
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* -------- 6. Hero Section -------- */
+.hero {
+  background: url("../assets/hero-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero-inner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.hero .lead {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding: 0.5rem 1.25rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+}
+
+.hero .cta {
+  margin-top: 1.5rem;
+}
+
+/* -------- 7. Buttons -------- */
+.button {
+  background: var(--primary);
+  color: var(--dark);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background: var(--dark);
+  color: var(--primary);
+}
+
+.button.alt {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.button.alt:hover {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+/* -------- 8. Cards -------- */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -------- 9. Grids & Layouts -------- */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* -------- 10. Tabs -------- */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.tab {
+  background: #eee;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.tab:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.tab.active {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+.tabpanes section {
+  display: none;
+}
+
+.tabpanes section.active {
+  display: block;
+}
+
+/* -------- 11. Forms -------- */
+input.input, select.input, textarea.input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+input.input:focus,
+select.input:focus,
+textarea.input:focus {
+  outline: 2px solid var(--primary);
+  border-color: var(--primary);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notice {
+  background: #fff8e1;
+  border-left: 4px solid var(--primary);
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+}
+
+/* -------- 12. Footer -------- */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+.footer h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.footer .small {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* -------- 13. Utilities -------- */
+.small { font-size: 0.9rem; color: var(--grey); }
+.dark { background: var(--dark); color: #fff; }
+
+/* -------- 14. Responsive Design -------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .form-row { flex-direction: column; }
+  .header .container { flex-wrap: wrap; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .grid-4, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero-inner h1 {
+    font-size: 1.8rem;
+  }
+
+  .actions {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .topbar .container {
+    flex-direction: column;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .button { padding: 0.6rem 1rem; font-size: 0.9rem; }
+  .container { width: 95%; }
+  .tabs { flex-direction: column; }
+}
+
+
